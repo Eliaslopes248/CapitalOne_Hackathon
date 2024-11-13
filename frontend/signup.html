@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="sheets/signup.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=khand@400&f[]=array@400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="con">
+        <h2>Sign Up</h2>
+        <form action="/signup_user" method="post">
+            <div class="form-group" id="g1">
+                <label for="username">Username:</label>
+                <input name="username" class="inputs" type="text" id="username" placeholder="">
+            </div>
+            <div class="form-group" id="g2">
+                <label for="email">Email:</label>
+                <input name="email" class="inputs" type="email" id="email" placeholder="">
+            </div>
+            <div class="form-group" id="g3">
+                <label for="password">Password:</label>
+                <input name="password" class="inputs" type="password" id="password" placeholder="">
+            </div>
+           
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="link-login">
+            <a href="login.html">Already have an account? Login here</a>
+        </div>
+    </div>
+</body>
+</html>

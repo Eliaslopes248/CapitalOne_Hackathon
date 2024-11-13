@@ -1,0 +1,123 @@
+:root {
+    --header-font: 'Array', sans-serif;
+    --paragraph: 'Khand', sans-serif;
+    --primary-color: #004B87;
+    --accent-color: #D42026;
+    --background-color: #FFFFFF;
+    --text-color: #004B87;
+    --button-text-color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+body {
+    font-family: var(--paragraph);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*--------form styles---------*/
+
+.con {
+    border: 1px solid;
+    width: 500px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(30vw) translateY(8vh);
+    background-color: var(--background-color);
+    box-shadow: 10px 3px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+}
+
+h2 {
+    font-family: var(--header-font);
+    font-size: 50px;
+    transform: translateY(1vh);
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    position: absolute;
+    transform: translateY(-25vh);
+}
+
+.form-group {
+    border: 0px solid;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 15px 0;
+    justify-content: center;
+    gap: 5px;
+    transform: translateY(13vh);
+}
+
+.form-group input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1.5px solid var(--primary-color);
+    
+}
+
+.inputs{
+    width: 200px;
+    border-width: 1px;
+}
+
+#g2 input{
+    width: 160px;
+    transform: translateX(1vw);
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+button {
+    background-color: var(--accent-color);
+    width: 150px;
+    height: 45px;
+    color: var(--button-text-color);
+    font-family: var(--paragraph);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    transform: translateY(10vh)translateX(5vw);
+}
+
+button:hover {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(9vh)translateX(5vw);
+}
+
+.link-login {
+    margin-top: 20px;
+    color: var(--primary-color);
+    font-size: 14px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 0px solid;
+    transform: translateY(9vh)translateX(-1vw);
+}
+
+
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    border-width: 2px;
+}

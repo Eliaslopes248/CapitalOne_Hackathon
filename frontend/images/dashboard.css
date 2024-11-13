@@ -1,0 +1,81 @@
+:root {
+    --header-font:'Array', sans-serif;
+    --paragraph:'Khand', sans-serif  ;
+    --primary-color: #004B87;
+    --accent-color: #D42026;
+    --background-color: #FFFFFF;
+    --text-color: #004B87;
+    --button-text-color: #FFFFFF;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
+}
+
+body {
+    font-family: var(--paragraph);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: var(--button-text-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: .2s;
+}
+
+#logo{
+    position: absolute;
+    transform: translateX(43vw)translateY(.5vh);
+    width: 120px;
+}
+
+nav a:hover{
+    color:gray;
+}
+
+nav .buttons {
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    padding: 7px;
+    border: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.buttons:hover{
+    box-shadow: 1px 1px 7px;
+    border-radius: 5px;
+    margin-bottom: 1vh;
+}
+
+#signup{
+    transform: translateX(61vw);
+}
+#login{
+    transform: translateX(60vw);
+}
+
+/*---------------dashboard widget-----------------*/
+.ui{
+    width: 100vw;
+    height: 85vh;
+    border: 1px solid;
+    transform: translateY(0vh);
+}
+
+
+
+
+/*-----------------chatbot---------------------------

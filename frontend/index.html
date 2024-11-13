@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capital One Savings</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=khand@400&f[]=array@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sheets/style.css">
+
+</head>
+<body>
+
+    <nav>
+        <a id="home-link" >Home</a>
+        <a id="about-link" >About</a>
+        <a id="mission-link" >Mission</a>
+
+        <img id="logo" src="images/logo.png" alt="" srcset="">
+
+        <div id="login" class="buttons"><a href="/login-page">Login</a></div>
+        <div id="signup" class="buttons"><a href="/signup-page">Sign Up</a></div>
+    </nav>
+
+     <!--------hero section-->
+
+    <section id="hero_container" class="hero-sect">
+
+        <div class="left-side-content">
+
+            <div class="hero-header">
+                Save Smarter with Capital <span>One</span>
+            </div>
+
+            <p class="sub-text">
+                At Capital One, we believe in empowering you to take control of your financial future. Our savings accounts are designed to help you maximize your money with competitive interest rates and innovative tools.
+            </p>
+
+            <button id="get-started">Get Started</button>
+        </div>
+
+        <div class="right-side-content">
+
+            <img class="coin" id="coin1" src="images\coin.png" alt="">
+            <img class="coin" id="coin2" src="images\coin.png" alt="">
+            
+
+            <div class="img-con">
+                <img id="hero-img" src="images\yellowlady.png" alt="" srcset="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!---------about section-->
+
+    <section id="about" class="about-section">
+
+        <div class="content-wrapper">
+
+            <h1 class="about-header">About Us</h1>
+
+            <div id="bar1" class="redbar"></div>
+
+            <p class="about-text">
+                We are a company dedicated to providing top-notch services and products to our customers.
+                Our team of experienced professionals works tirelessly to ensure customer satisfaction 
+                and deliver exceptional value.
+            </p>
+        </div>
+
+        
+            <img id="hand-cards" src="images/cards.png" alt="">
+       
+        
+    
+    </section>
+    
+        
+    <!-- Our Mission Section -->
+<section id="mission" class="section mission-section">
+    <div class="content-wrapper mission-content">
+        <h2 class="header mission-header">Our Mission</h2>
+        <div id="bar2" class="redbar"></div>
+        <p class="text mission-text">
+            At Capital One, our mission is to change banking for good by bringing humanity, ingenuity, and simplicity to banking.
+            We are committed to empowering our customers with innovative solutions and delivering unparalleled experiences
+            that help them succeed.
+        </p>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="footer" class="footer-section">
+    <div class="content-wrapper footer-content">
+        <!-- Capital One Logo -->
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Capital One Logo" class="logo-img">
+        </div>
+
+        <!-- Footer Links -->
+        <nav class="footer-nav">
+            <ul class="footer-links">
+               <a href="" class="footer-link">About Us</a>
+               <a href="" class="footer-link">Careers</a>
+               <a href="" class="footer-link">Privacy Policy</a>
+               <a href="" class="footer-link">Terms of Service</a>
+               <a href="" class="footer-link">Contact Us</a>
+            </ul>
+        </nav>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://facebook.com/capitalone" class="social-link" aria-label="Facebook">Facebook</a>
+            <a href="https://twitter.com/capitalone" class="social-link" aria-label="Twitter">Twitter</a>
+            <a href="https://linkedin.com/company/capitalone" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://instagram.com/capitalone" class="social-link" aria-label="Instagram">Instagram</a>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p class="footer-text">&copy; 2024 Capital One. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+<!--js scripts------------>
+<script>
+
+    //links
+    let home_link = document.getElementById('home-link')
+    let about_link = document.getElementById("about-link")
+    let mission_link = document.getElementById("mission-link")
+    let getStarted = document.getElementById("get-started")
+    //sections event listeners
+    home_link.addEventListener("click",()=>{
+        document.getElementById("hero_container").scrollIntoView({behavior:"smooth"})
+    })
+
+    about_link.addEventListener("click",()=>{
+        document.getElementById("about").scrollIntoView({behavior:"smooth"})
+    })
+
+    mission_link.addEventListener("click",()=>{
+        document.getElementById("mission").scrollIntoView({behavior:"smooth"})
+    })
+
+    getStarted.addEventListener("click",()=>{
+        document.getElementById("about").scrollIntoView({behavior:"smooth"})
+    })
+
+
+
+
+</script>
+</html>

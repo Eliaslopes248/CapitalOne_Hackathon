@@ -1,0 +1,15 @@
+[
+  {
+    "username": "elias",
+    "email": "eliaslopes@gmail.com",
+    "password": "12344",
+    "deposits": [
+      "655488"
+    ],
+    "transaction": [
+      "987"
+    ],
+    "balance": 0,
+    "rewards_points": 0
+  }
+]

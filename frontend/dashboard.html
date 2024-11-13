@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="sheets/dashboard.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=khand@400&f[]=array@400&display=swap" rel="stylesheet">
+
+</head>
+
+<script>
+    //test
+    // Fetching data from backend is optional if you want to use client-side JS
+    async function getData() {
+        const response = await fetch('/dashboard');
+        const data = await response.json();
+        // Use the data here if needed in JS
+    }
+</script>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html">About</a>
+        <a href="index.html">Mission</a>
+
+        <div class="profile-con" id="profile">
+
+        </div>
+
+        
+
+        <img id="logo" src="images/logo.png" alt="Logo">
+
+        <div id="login" class="buttons">
+            <a href="/login">Login</a>
+        </div>
+        <div id="signup" class="buttons">
+            <a href="/signup">Sign Up</a>
+        </div>
+    </nav>
+
+    <section class="ui">
+        <section class="sub-section" id="widget-container">
+            <div class="widget" id="balance">Balance:</div>
+
+            <div class="widget" id="money-in">Income:
+
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256" id="add-deposite">
+                    <g fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60982,0 21,9.39018 21,21c0,11.60982 -9.39018,21 -21,21c-11.60982,0 -21,-9.39018 -21,-21c0,-11.60982 9.39018,-21 21,-21zM24,13v11h-11v2h11v11h2v-11h11v-2h-11v-11z"></path></g></g>
+                    </svg>
+            </div>
+
+            <div class="widget" id="money-out">Spent:
+
+                <svg id="add-transaction" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0,0,256,256">
+                    <g  fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(5.12,5.12)"><path d="M25,2c-12.6907,0 -23,10.3093 -23,23c0,12.69071 10.3093,23 23,23c12.69071,0 23,-10.30929 23,-23c0,-12.6907 -10.30929,-23 -23,-23zM25,4c11.60982,0 21,9.39018 21,21c0,11.60982 -9.39018,21 -21,21c-11.60982,0 -21,-9.39018 -21,-21c0,-11.60982 9.39018,-21 21,-21zM24,13v11h-11v2h11v11h2v-11h11v-2h-11v-11z"></path></g></g>
+                    </svg>
+            </div>
+
+            <div class="widget" id="svs">
+                <h2>Save vs Spending</h2>
+            </div>
+
+            <div class="widget" id="stir">
+                <h2>Spend to Income Ratio</h2>
+            </div>
+        </section>
+
+        <section class="sub-section" id="chatbot-form2-container">
+           
+           
+            <div class="seperators">
+
+                 <!-- deposit Form -->
+                <div id="deposit-form-container">
+                    <h2>Add Deposit</h2>
+                    <form id="deposit-form" action="/deposit_update" method="post">
+                        <label for="deposit-amount">Deposit Amount:</label>
+                        <input placeholder="$0.00" type="number" id="deposit-amount" name="amount" required>
+                        <button type="submit">Add Deposit</button>
+                        <input type="hidden" name="type" value="deposit">
+                        
+                    </form>
+                </div>
+            
+                <!-- Transaction Form -->
+                <div id="transaction-form-container">
+                    <h2>Add Transaction</h2>
+                    <form id="transaction-form" action="/transaction_update" method="post">
+                        <label for="transaction-amount">Transaction Amount:</label>
+                        <input placeholder="$0.00" type="number" id="transaction-amount" name="amount" required>
+                        <button type="submit">Add Transaction</button>
+                        <input type="hidden" name="type" value="transaction">
+                    </form>
+                </div>
+            
+
+            </div>
+           
+           
+           
+            <div class="seperators">
+                <h1>Ask <span>Howard!</span></h1>
+                <div class="response-box" id="res-box">
+                    <p id="res-box-text"></p>
+                </div>
+               
+                <div id="chatbot-div">
+                    <div class="input-group">
+                        <input type="text" class="prompt-box" placeholder="Ask for advice..." id="ai-input-box">
+                    <button id="submit-ai" type="button">Enter</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Footer Section -->
+<footer id="footer" class="footer-section">
+    <div class="content-wrapper footer-content">
+        <!-- Capital One Logo -->
+        <div class="footer-logo">
+            <img src="images/logo.png" alt="Capital One Logo" class="logo-img">
+        </div>
+
+        <!-- Footer Links -->
+        <nav class="footer-nav">
+            <ul class="footer-links">
+               <a href="" class="footer-link">About Us</a>
+               <a href="" class="footer-link">Careers</a>
+               <a href="" class="footer-link">Privacy Policy</a>
+               <a href="" class="footer-link">Terms of Service</a>
+               <a href="" class="footer-link">Contact Us</a>
+            </ul>
+        </nav>
+
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <a href="https://facebook.com/capitalone" class="social-link" aria-label="Facebook">Facebook</a>
+            <a href="https://twitter.com/capitalone" class="social-link" aria-label="Twitter">Twitter</a>
+            <a href="https://linkedin.com/company/capitalone" class="social-link" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://instagram.com/capitalone" class="social-link" aria-label="Instagram">Instagram</a>
+        </div>
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom">
+            <p class="footer-text">&copy; 2024 Capital One. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    <script src="scripts.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/openai"></script>
+<script>
+    const { OpenAI } = window; // Assuming you have OpenAI library loaded via CDN
+    const client = new OpenAI();
+
+    // Get HTML elements
+    const inputBox = document.getElementById('ai-input-box');
+    const submitButton = document.getElementById('submit-ai');
+    const responseBox = document.getElementById('res-box-text');
+
+    // Event listener for the button click
+    submitButton.addEventListener('click', async () => {
+        const userInput = inputBox.value.trim();
+        
+        // Check if there's input
+        if (userInput) {
+            try {
+                // Send request to OpenAI API
+                const response = await client.chat.completions.create({
+                    messages: [{ role: 'user', content: userInput }],
+                    model: 'gpt-4o-mini'
+                });
+
+                // Display the response in the response box
+                responseBox.textContent = response.choices[0].message.content;
+
+                // Clear the input box
+                inputBox.value = '';
+            } catch (error) {
+                console.error('Error communicating with OpenAI:', error);
+                responseBox.textContent = 'Sorry, something went wrong. Please try again later.';
+            }
+        } else {
+            responseBox.textContent = 'Please enter a question.';
+        }
+    });
+</script>
+    
+</body>
+
+
+</html>
