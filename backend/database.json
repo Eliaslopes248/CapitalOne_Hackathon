@@ -11,5 +11,18 @@
     ],
     "balance": 0,
     "rewards_points": 0
+  },
+  {
+    "username": "heidy",
+    "email": "eliaslopes@gmail.com",
+    "password": "1",
+    "deposits": [
+      "10000"
+    ],
+    "transaction": [
+      "30000"
+    ],
+    "balance": 0,
+    "rewards_points": 0
   }
 ]
